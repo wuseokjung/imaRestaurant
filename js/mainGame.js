@@ -483,33 +483,27 @@ const gameData = {
 
 const restaurantProfiles = {
   "4 Charles Prime Rib": {
-    description:
-      "The Timeless Classic: You're old-school elegance personified, with a soft spot for vintage Hollywood glamor. Think fur coats, red lipstick, and candlelit dinners. You know your way around the finer things in life—without the need for showy displays. You're low-key confident, slightly mysterious, and definitely know how to make others feel at home with your cozy, intimate vibes.",
+    description: "The Timeless Classic",
     image: "4Charles.png",
   },
   Carbone: {
-    description:
-      "The Fiery Diva: You're the life of the party and never miss a chance to make an entrance. With your vintage Italian flair, you love loud laughter, high-energy dinners, and the occasional dramatic flare-up. You're warm-hearted but definitely spicy, with a no-nonsense attitude that matches your love for unapologetically rich, over-the-top experiences.",
+    description: "The Fiery Diva",
     image: "Carbone.png",
   },
   "I Sodi": {
-    description:
-      "The Chic Minimalist: Quiet, elegant, and refined, you're all about subtlety and balance. You're found in chic, understated outfits that speak volumes in their simplicity. Your taste is impeccable, with a love for all things authentic and perfectly executed. You're thoughtful, composed, and know exactly what you want.",
+    description: "The Chic Minimalist",
     image: "ISodi.png",
   },
   "The Polo Bar": {
-    description:
-      "The All-American Heiress: A picture of prep and polish, you're the epitome of classic, old-money Americana. You're into tradition, Sunday brunches, and looking effortlessly chic in tailored blazers. You love things with a sense of heritage and welcome others warmly, but only if they know the rules of your world.",
+    description: "The All-American Heiress",
     image: "PoloBar.png",
   },
   Tatiana: {
-    description:
-      "The Bold Trendsetter: You're cool, artistic, and always ahead of the curve, setting trends without even trying. A creative soul with an edge, you mix high fashion with street style and somehow pull it off flawlessly. You're unapologetically yourself, taking inspiration from the culture around you and blending it into something fresh and unique.",
+    description: "The Bold Trendsetter",
     image: "Tatiana.png",
   },
   "The Corner Store": {
-    description:
-      "The Neighborhood Sweetheart: You're approachable, laid-back, and always there when needed. You're the girl-next-door type who knows everyone in the neighborhood and makes them feel like part of the community. Dressed in casual, comfy clothes, you love keeping things simple and familiar. Down-to-earth and unpretentious, you're all about genuine connections and creating a welcoming space where everyone feels at home. Whether it's grabbing a quick coffee with friends or hosting a casual get-together, you're the reliable friend who makes every day feel a little more special.",
+    description: "The Neighborhood Sweetheart",
     image: "CornerStore.png",
   },
 };
