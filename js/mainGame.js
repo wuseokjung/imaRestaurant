@@ -2,7 +2,7 @@ const gameData = {
   1: {
     text: "Good morning! You wake up on a Saturday thirsty, what're you reaching for?",
     choices: {
-      Water: {
+      water: {
         next: 2,
         scores: {
           "4 Charles Prime Rib": 2,
@@ -10,7 +10,7 @@ const gameData = {
           "The Polo Bar": 1,
         },
       },
-      Tea: {
+      tea: {
         next: 2,
         scores: {
           Carbone: 2,
@@ -18,7 +18,7 @@ const gameData = {
           "The Polo Bar": 2,
         },
       },
-      Mimosa: {
+      mimosa: {
         next: 2,
         scores: {
           Tatiana: 2,
@@ -26,7 +26,7 @@ const gameData = {
           Carbone: 1,
         },
       },
-      Coffee: {
+      coffee: {
         next: 2,
         scores: {
           "4 Charles Prime Rib": 1,
