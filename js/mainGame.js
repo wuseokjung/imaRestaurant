@@ -559,16 +559,12 @@ function revealResult() {
 
   container.innerHTML = `
     <div class="result-container">
-      <h2 class="result-title">You are ${result}!</h2>
       <img 
         src="smaller_images/id_cards/${profile.image}" 
         alt="${result}" 
         class="responsive-image"
         style="max-width: 100%; height: auto; margin: 20px auto;"
       >
-      <p class="result-description" style="margin: 20px 0; line-height: 1.6;">
-        ${profile.description}
-      </p>
       <button onclick="location.reload()" class="choice-button" style="margin-top: 20px;">
         Play Again
       </button>
