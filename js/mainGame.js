@@ -1,7 +1,6 @@
 const gameData = {
   1: {
     text: "Good morning! You wake up on a Saturday thirsty, what're you reaching for?",
-    image: "morning-drink.jpg",
     choices: {
       Water: {
         next: 2,
@@ -47,7 +46,6 @@ const gameData = {
   },
   2: {
     text: "Time to get going! How are you going to spend your morning?",
-    image: "morning-activity.jpg",
     choices: {
       "Going back to bed": {
         next: 3,
@@ -89,7 +87,6 @@ const gameData = {
   },
   3: {
     text: "You decide to go to lunch, what do you order?",
-    image: "lunch.jpg",
     choices: {
       "A juicy burger with killer fries": {
         next: 4,
@@ -123,7 +120,6 @@ const gameData = {
   },
   4: {
     text: "Who is at lunch with you?",
-    image: "lunch-company.jpg",
     choices: {
       "Table for 1": {
         next: 5,
@@ -166,7 +162,6 @@ const gameData = {
   },
   5: {
     text: "Lunch was delicious! It's time to explore, which neighborhood are you headed to?",
-    image: "neighborhood.jpg",
     choices: {
       "West Village": {
         next: 6,
@@ -203,7 +198,6 @@ const gameData = {
   },
   6: {
     text: "You've arrived! What are you going to do?",
-    image: "activity.jpg",
     choices: {
       "Grab coffee & yap": {
         next: 7,
@@ -245,7 +239,6 @@ const gameData = {
   },
   7: {
     text: "You're tired and ready to go home. How are you getting there?",
-    image: "transport.jpg",
     choices: {
       "Take the train": {
         next: 8,
@@ -282,7 +275,6 @@ const gameData = {
   },
   8: {
     text: "You're home and you have a few hours to yourself, what are you doing?",
-    image: "home.jpg",
     choices: {
       "Taking a nap": {
         next: 9,
@@ -323,7 +315,6 @@ const gameData = {
   },
   9: {
     text: "Time to get ready! What are you most likely wearing?",
-    image: "outfit.jpg",
     choices: {
       "Dress to impress": {
         next: 10,
@@ -361,7 +352,6 @@ const gameData = {
   },
   10: {
     text: "What are you spending your Saturday night doing?",
-    image: "night.jpg",
     choices: {
       "Bar hopping": {
         next: 11,
@@ -403,7 +393,6 @@ const gameData = {
   },
   11: {
     text: "It's time to call it a night, what're you grabbing on your way home?",
-    image: "late-night.jpg",
     choices: {
       "7th street burger": {
         next: 12,
@@ -441,7 +430,6 @@ const gameData = {
   },
   12: {
     text: "Sweet dreams! What are you dreaming about?",
-    image: "dreams.jpg",
     choices: {
       "Something stressful": {
         next: 0,
@@ -521,11 +509,11 @@ let currentState = 1;
 
 function renderState(state) {
   const storyText = document.getElementById("story-text");
-  const storyImage = document.getElementById("story-image");
+  // const storyImage = document.getElementById("story-image");
   const choicesContainer = document.getElementById("choices");
 
   storyText.textContent = gameData[state].text;
-  storyImage.src = gameData[state].image;
+  // storyImage.src = gameData[state].image;
   choicesContainer.innerHTML = "";
 
   Object.entries(gameData[state].choices).forEach(([choice, info]) => {
@@ -560,7 +548,7 @@ function revealResult() {
   container.innerHTML = `
     <div class="result-container">
       <img 
-        src="smaller_images/id_cards/${profile.image}" 
+        src="smaller_images/${profile.image}" 
         alt="${result}" 
         class="responsive-image"
         style="max-width: 100%; height: auto; margin: 20px auto;"
