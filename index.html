@@ -27,21 +27,30 @@
       }
 
       .container {
-        width: 100vw; /* full viewport width */
-        height: calc(100vw * (16 / 9)); /* maintain 9:16 aspect ratio */
-        max-height: 150vh; /* full viewport height */
+        width: 100vw;
+        height: calc(100vw * (16 / 9));
+        max-height: 150vh;
         max-width: calc(100vh * (9 / 16));
         padding: 20px;
-        /* border-radius: 10px; */
         background: #faf5e2;
-        /* background: #e5f2d2; */
-        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
         text-align: center;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* overflow-y: auto; */
+        position: relative;
+      }
+
+      /* Add background image styling */
+      .container.game-active {
+        background: linear-gradient(
+            rgba(250, 245, 226, 0.85),
+            rgba(250, 245, 226, 0.85)
+          ),
+          url("/smaller_images/empireState.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
       }
 
       .title {
@@ -52,12 +61,12 @@
       .start-button {
         font-size: 21px;
         padding: 1vh 2vw;
-        /* border: 2px solid #fcf0c0; */
         background-color: #f8eab6;
         cursor: pointer;
         text-decoration: none;
         margin-bottom: 3vh;
         color: black;
+        border-radius: 10px;
       }
 
       .start-button:hover {
@@ -72,59 +81,49 @@
 
       .choices {
         display: flex;
-        flex-direction: column; /* Arrange buttons in a column */
-        align-items: center; /* Center the buttons horizontally */
-        gap: 10px; /* Space between the buttons */
-        margin-top: 2rem; /* Space above the choices container */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 2rem;
       }
 
       .choice-button {
         font-family: "Noto Serif", serif;
-        font-size: 18px; /* Adjust font size to be smaller */
-        padding: 2vh 1vw; /* Adjust padding based on viewport height and width */
-        width: 90%; /* Set width to 60% of screen width */
-        color: #511827; /* Text color */
-        font-weight: bold; /* Bold text */
-        border: none; /* Remove border */
-        background-color: rgba(246, 233, 189, 0.8); /* Transparent background */
-        cursor: pointer; /* Pointer cursor on hover */
-        transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+        font-size: 18px;
+        padding: 2vh 1vw;
+        width: 90%;
+        color: #511827;
+        font-weight: bold;
+        border: none;
+        background-color: rgba(246, 233, 189, 0.8);
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        border-radius: 10px;
       }
 
       @media (hover: hover) {
         .choice-button:hover {
-          background-color: rgba(
-            243,
-            219,
-            167,
-            0.8
-          ); /* Slightly darker background on hover */
+          background-color: rgba(243, 219, 167, 0.8);
         }
       }
       .choice-button:focus {
-        background-color: rgba(
-          255,
-          255,
-          255,
-          0.8
-        ); /* Slightly darker background on focus */
+        background-color: rgba(255, 255, 255, 0.8);
       }
       .story-text {
         font-size: 20px;
-        margin-bottom: 1rem; /* Space above the choices container */
-        /* padding-bottom: 5rem; */
+        margin-bottom: 1rem;
       }
 
       .image-container {
-        max-width: 70%; /* Set max width of image container */
-        margin: 0 auto; /* Center the image horizontally */
+        max-width: 70%;
+        margin: 0 auto;
       }
 
       .image-container img {
-        width: 100%; /* Make the image fill its container */
-        height: auto; /* Maintain aspect ratio */
-        display: block; /* Remove any extra space */
-        max-width: 100%; /* Ensure image does not exceed its container */
+        width: 100%;
+        height: auto;
+        display: block;
+        max-width: 100%;
       }
 
       .responsive-image {
@@ -134,7 +133,7 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="main-container">
       <div class="title">What restaurant are you?</div>
       <img
         id="homescreen"
