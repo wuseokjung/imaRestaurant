@@ -68,16 +68,16 @@
 
       .game-container {
         display: none;
-        margin-top: 10%;
         overflow: auto;
         align-items: center;
         justify-content: center;
+        margin-bottom: 8%;
       }
 
       .story-text {
         font-size: 22px;
         margin-bottom: 2rem;
-        padding: 4vh 1vw;
+        padding: 3vh 1vw;
         background-color: rgba(232, 217, 204, 0.8);
         color: #511827;
         font-weight: bold;
@@ -87,9 +87,11 @@
         margin-right: -20px;
         padding-left: 20px;
         padding-right: 20px;
-
         position: relative;
         left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       .choices {
@@ -113,6 +115,22 @@
         cursor: pointer;
         transition: background-color 0.3s, transform 0.3s;
         border-radius: 10px;
+      }
+
+      .share-button {
+        font-family: "Noto Serif", serif;
+        font-size: 18px;
+        /* padding: 2vh 1vw; */
+        /* width: 75%; */
+        color: #511827;
+        font-weight: bold;
+        border: none;
+        /* background-color: rgba(232, 217, 204, 0.8); */
+        cursor: pointer;
+        /* transition: background-color 0.3s, transform 0.3s; */
+        border-radius: 10px;
+        margin-top: 20px;
+        /* margin-bottom: 20px; */
       }
 
       @media (hover: hover) {
@@ -139,6 +157,7 @@
       .responsive-image {
         max-width: 100%;
         height: auto;
+        margin-top: 15%;
       }
 
       .container.game-active {
@@ -146,6 +165,14 @@
           center;
         background-size: cover;
         background-position: center;
+      }
+
+      .question-number {
+        font-size: 18px;
+        color: #511827;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        font-weight: bold;
       }
     </style>
   </head>
@@ -159,7 +186,6 @@
         alt="Story Image"
       />
       <a href="#" class="start-button" onclick="startGame()">Start</a>
-
       <div class="game-container" id="game-container">
         <div class="story-text" id="story-text"></div>
         <div class="choices" id="choices"></div>

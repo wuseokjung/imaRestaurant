@@ -360,7 +360,7 @@ const gameData = {
           Tatiana: 2,
         },
       },
-      "celebrating a birthday (why is it always someone's birthday)": {
+      "celebrating a bday (there's always a bday)": {
         next: 11,
         scores: {
           Carbone: 2,
@@ -382,7 +382,7 @@ const gameData = {
           "I Sodi": 2,
         },
       },
-      "jazz or comedy club (aka trying to adult)": {
+      "jazz or comedy club": {
         next: 11,
         scores: {
           "The Polo Bar": 2,
@@ -509,11 +509,13 @@ let currentState = 1;
 
 function renderState(state) {
   const storyText = document.getElementById("story-text");
-  // const storyImage = document.getElementById("story-image");
   const choicesContainer = document.getElementById("choices");
 
-  storyText.textContent = gameData[state].text;
-  // storyImage.src = gameData[state].image;
+  storyText.innerHTML = `
+    <div class="question-number">Question ${state} of 12</div>
+    <div>${gameData[state].text}</div>
+  `;
+
   choicesContainer.innerHTML = "";
 
   Object.entries(gameData[state].choices).forEach(([choice, info]) => {
@@ -521,7 +523,6 @@ function renderState(state) {
     button.textContent = choice;
     button.className = "choice-button";
     button.onclick = () => {
-      // Update scores
       Object.entries(info.scores).forEach(([restaurant, score]) => {
         scores[restaurant] += score;
       });
@@ -553,9 +554,9 @@ function revealResult() {
         src="smaller_images/${profile.image}" 
         alt="${result}" 
         class="responsive-image"
-        style="max-width: 100%; height: auto; margin: 20px auto;"
+        style="max-width: 100%; height: auto;"
       >
-      <button onclick="location.reload()" class="choice-button" style="margin-top: 20px; margin-bottom: 20px;">
+      <button onclick="location.reload()" class="share-button">
         Share with friends!
       </button>
     </div>
