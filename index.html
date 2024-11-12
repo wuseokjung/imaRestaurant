@@ -71,7 +71,6 @@
         overflow: auto;
         align-items: center;
         justify-content: center;
-        margin-bottom: 8%;
       }
 
       .story-text {
@@ -120,17 +119,23 @@
       .share-button {
         font-family: "Noto Serif", serif;
         font-size: 18px;
-        /* padding: 2vh 1vw; */
-        /* width: 75%; */
         color: #511827;
         font-weight: bold;
         border: none;
-        /* background-color: rgba(232, 217, 204, 0.8); */
         cursor: pointer;
-        /* transition: background-color 0.3s, transform 0.3s; */
-        border-radius: 10px;
-        margin-top: 20px;
-        /* margin-bottom: 20px; */
+        background: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 20px auto;
+      }
+
+      .share-button:hover {
+        text-decoration: none;
+      }
+
+      .share-button svg {
+        transform: translateY(-1px);
       }
 
       @media (hover: hover) {
@@ -139,7 +144,7 @@
         }
       }
       .choice-button:focus {
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(85, 45, 45, 0.8);
       }
 
       .image-container {
@@ -187,8 +192,10 @@
       />
       <a href="#" class="start-button" onclick="startGame()">Start</a>
       <div class="game-container" id="game-container">
-        <div class="story-text" id="story-text"></div>
-        <div class="choices" id="choices"></div>
+        <div style="margin-bottom: 10%">
+          <div class="story-text" id="story-text"></div>
+          <div class="choices" id="choices"></div>
+        </div>
       </div>
     </div>
 

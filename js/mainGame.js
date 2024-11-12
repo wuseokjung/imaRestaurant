@@ -547,6 +547,7 @@ function revealResult() {
   const profile = restaurantProfiles[result];
 
   document.getElementById("main-container").classList.remove("game-active");
+  document.querySelector(".title").style.display = "block";
 
   container.innerHTML = `
     <div class="result-container">
@@ -556,14 +557,18 @@ function revealResult() {
         class="responsive-image"
         style="max-width: 100%; height: auto;"
       >
-      <button onclick="location.reload()" class="share-button">
-        Share with friends!
+      <button onclick="location.reload()" class="share-button" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="share-icon">
+          <path d="M7 17l9.2-9.2M17 17V7H7"/>
+        </svg>
+        <u>share with friends</u>
       </button>
     </div>
   `;
 }
 
 function startGame() {
+  // Hide the title during the quiz
   document.querySelector(".title").style.display = "none";
   document.getElementById("homescreen").style.display = "none";
   document.querySelector(".start-button").style.display = "none";
