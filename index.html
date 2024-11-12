@@ -10,29 +10,26 @@
       rel="stylesheet"
     />
     <style>
-      @font-face {
-        font-family: "Noto Serif", serif;
-        src: url("Pixelify_Sans/pixel_font.ttf") format("truetype");
-      }
-
       body,
       html {
-        height: 100%;
         margin: 0;
         display: flex;
         align-items: center;
         justify-content: center;
         font-family: "Noto Serif", serif;
-        background: #511827;
+        background: #98a1b3;
+        height: 100vh;
       }
 
       .container {
         width: 100vw;
-        height: calc(100vw * (16 / 9));
+        height: 100vh;
         max-height: 150vh;
         max-width: calc(100vh * (9 / 16));
-        padding: 20px;
-        background: #faf5e2;
+        /* background: url("smaller_images/empireState3.png") no-repeat center
+          center; */
+        background-color: #e8d9cc;
+        background-size: cover;
         text-align: center;
         box-sizing: border-box;
         display: flex;
@@ -41,32 +38,33 @@
         position: relative;
       }
 
-      /* Add background image styling */
-      .container.game-active {
-        background: linear-gradient(
-            rgba(250, 245, 226, 0.85),
-            rgba(250, 245, 226, 0.85)
-          ),
-          url("/smaller_images/empireState.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+      .header {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding: 40px 0;
+        background-color: #e8d9cc;
       }
 
       .title {
-        font-size: 21px;
-        margin-bottom: 3vh;
+        font-size: 16px;
+        color: white;
+        font-style: italic;
       }
 
       .start-button {
-        font-size: 21px;
-        padding: 1vh 2vw;
-        background-color: #f8eab6;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 1.5vh 1vw;
+        background-color: #511827;
         cursor: pointer;
         text-decoration: none;
-        margin-bottom: 3vh;
-        color: black;
+        color: white;
         border-radius: 10px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
       }
 
       .start-button:hover {
@@ -77,25 +75,45 @@
         display: none;
         margin-top: 10%;
         overflow: auto;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .story-text {
+        font-size: 22px;
+        margin-bottom: 2rem;
+        padding: 2vh 1vw;
+        background-color: rgba(232, 217, 204, 0.8);
+        color: #511827;
+        font-weight: bold;
+        width: 100%;
+        box-sizing: border-box;
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        position: relative;
+        left: 20px;
       }
 
       .choices {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        margin-top: 2rem;
+        gap: 15px;
+        margin-top: 3rem;
+        width: 100%;
       }
 
       .choice-button {
         font-family: "Noto Serif", serif;
-        font-size: 18px;
+        font-size: 20px;
         padding: 2vh 1vw;
-        width: 90%;
+        width: 75%;
         color: #511827;
         font-weight: bold;
         border: none;
-        background-color: rgba(246, 233, 189, 0.8);
+        background-color: rgba(232, 217, 204, 0.8);
         cursor: pointer;
         transition: background-color 0.3s, transform 0.3s;
         border-radius: 10px;
@@ -108,10 +126,6 @@
       }
       .choice-button:focus {
         background-color: rgba(255, 255, 255, 0.8);
-      }
-      .story-text {
-        font-size: 20px;
-        margin-bottom: 1rem;
       }
 
       .image-container {
@@ -134,11 +148,19 @@
   </head>
   <body>
     <div class="container" id="main-container">
-      <div class="title">What restaurant are you?</div>
+      <div class="header">
+        <div class="title">Shortlist New York</div>
+      </div>
       <img
         id="homescreen"
-        style="padding-bottom: 15px"
-        src="smaller_images/empireState.jpg"
+        style="
+          margin-bottom: 10px;
+          margin-left: auto;
+          margin-right: auto;
+          width: 70%;
+          display: block;
+        "
+        src="smaller_images/biggercover.png"
         alt="Story Image"
       />
       <a href="#" class="start-button" onclick="startGame()">Start</a>

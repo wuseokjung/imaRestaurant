@@ -1,6 +1,6 @@
 const gameData = {
   1: {
-    text: "Good morning! You wake up on a Saturday thirsty, what're you reaching for?",
+    text: "good morning! you wake up on a saturday thirsty, what're you reaching for?",
     choices: {
       water: {
         next: 2,
@@ -34,7 +34,7 @@ const gameData = {
           "The Polo Bar": 1,
         },
       },
-      "Cold-pressed juice": {
+      "cold-pressed juice": {
         next: 2,
         scores: {
           Tatiana: 2,
@@ -45,16 +45,16 @@ const gameData = {
     },
   },
   2: {
-    text: "Time to get going! How are you going to spend your morning?",
+    text: "time to get going! how are you going to spend your morning?",
     choices: {
-      "Going back to bed": {
+      "going back to bed": {
         next: 3,
         scores: {
           "4 Charles Prime Rib": 2,
           "I Sodi": 2,
         },
       },
-      "Brunch with friends": {
+      "brunch with friends": {
         next: 3,
         scores: {
           "The Corner Store": 2,
@@ -62,21 +62,21 @@ const gameData = {
           Carbone: 2,
         },
       },
-      "Out & about exploring the city": {
+      "out & about exploring the city": {
         next: 3,
         scores: {
           Tatiana: 2,
           "The Polo Bar": 1,
         },
       },
-      "Working out": {
+      "working out": {
         next: 3,
         scores: {
           "The Polo Bar": 2,
           "4 Charles Prime Rib": 1,
         },
       },
-      "Run club": {
+      "run club": {
         next: 3,
         scores: {
           "I Sodi": 2,
@@ -86,30 +86,30 @@ const gameData = {
     },
   },
   3: {
-    text: "You decide to go to lunch, what do you order?",
+    text: "you decide to go to lunch, what do you order?",
     choices: {
-      "A juicy burger with killer fries": {
+      "a juicy burger with killer fries": {
         next: 4,
         scores: {
           "4 Charles Prime Rib": 2,
           "The Corner Store": 2,
         },
       },
-      "Whatever your friends posted on beli": {
+      "whatever your friends posted on beli": {
         next: 4,
         scores: {
           Carbone: 2,
           Tatiana: 1,
         },
       },
-      "Salad (does anyone do this?)": {
+      "salad (does anyone do this?)": {
         next: 4,
         scores: {
           Carbone: 1,
           "The Polo Bar": 2,
         },
       },
-      "Trying something new!": {
+      "trying something new!": {
         next: 4,
         scores: {
           Tatiana: 2,
@@ -119,23 +119,23 @@ const gameData = {
     },
   },
   4: {
-    text: "Who is at lunch with you?",
+    text: "who is at lunch with you?",
     choices: {
-      "Table for 1": {
+      "table for 1": {
         next: 5,
         scores: {
           "4 Charles Prime Rib": 2,
           "I Sodi": 2,
         },
       },
-      "Your long-term situationship (so nyc)": {
+      "your long-term situationship (so nyc)": {
         next: 5,
         scores: {
           "The Corner Store": 2,
           "The Polo Bar": 1,
         },
       },
-      "Significant other": {
+      "significant other": {
         next: 5,
         scores: {
           "The Polo Bar": 2,
@@ -143,7 +143,7 @@ const gameData = {
           "4 Charles Prime Rib": 2,
         },
       },
-      "College friends": {
+      "college friends": {
         next: 5,
         scores: {
           Carbone: 2,
@@ -151,7 +151,7 @@ const gameData = {
           "4 Charles Prime Rib": 1,
         },
       },
-      "Friends you made in the city": {
+      "friends you made in the city": {
         next: 5,
         scores: {
           Tatiana: 2,
@@ -161,34 +161,34 @@ const gameData = {
     },
   },
   5: {
-    text: "Lunch was delicious! It's time to explore, which neighborhood are you headed to?",
+    text: "lunch was delicious! it's time to explore, which neighborhood are you headed to?",
     choices: {
-      "West Village": {
+      "west village": {
         next: 6,
         scores: {
           "I Sodi": 2,
         },
       },
-      "Lower East Side": {
+      "lower east side": {
         next: 6,
         scores: {
           "The Corner Store": 2,
           Tatiana: 2,
         },
       },
-      Soho: {
+      soho: {
         next: 6,
         scores: {
           Carbone: 2,
         },
       },
-      Midtown: {
+      midtown: {
         next: 6,
         scores: {
           "The Polo Bar": 2,
         },
       },
-      "Upper East Side": {
+      "upper east side": {
         next: 6,
         scores: {
           "4 Charles Prime Rib": 2,
@@ -197,16 +197,16 @@ const gameData = {
     },
   },
   6: {
-    text: "You've arrived! What are you going to do?",
+    text: "you've arrived! what are you going to do?",
     choices: {
-      "Grab coffee & yap": {
+      "grab coffee & yap": {
         next: 7,
         scores: {
           "The Corner Store": 2,
           "I Sodi": 1,
         },
       },
-      Shop: {
+      shop: {
         next: 7,
         scores: {
           Tatiana: 2,
@@ -214,21 +214,21 @@ const gameData = {
           "4 Charles Prime Rib": 1,
         },
       },
-      "Aimlessly walk": {
+      "aimlessly walk": {
         next: 7,
         scores: {
           "I Sodi": 2,
           "The Corner Store": 1,
         },
       },
-      "Sit down with a drinky": {
+      "sit down with a drinky": {
         next: 7,
         scores: {
           "The Polo Bar": 2,
           Carbone: 2,
         },
       },
-      "Do something artsy": {
+      "do something artsy": {
         next: 7,
         scores: {
           Tatiana: 2,
@@ -238,34 +238,34 @@ const gameData = {
     },
   },
   7: {
-    text: "You're tired and ready to go home. How are you getting there?",
+    text: "you're tired and ready to go home. how are you getting there?",
     choices: {
-      "Take the train": {
+      "take the train": {
         next: 8,
         scores: {
           "The Corner Store": 2,
         },
       },
-      "Get the steps in & walk": {
+      "get the steps in & walk": {
         next: 8,
         scores: {
           "I Sodi": 2,
         },
       },
-      "Citi bike (proud of you!)": {
+      "citi bike (proud of you!)": {
         next: 8,
         scores: {
           Tatiana: 2,
         },
       },
-      "Uber/Lyft (again)": {
+      "uber/lyft (again)": {
         next: 8,
         scores: {
           Carbone: 2,
           "4 Charles Prime Rib": 2,
         },
       },
-      "Hail a taxi (does anyone do this)": {
+      "hail a taxi (does anyone do this)": {
         next: 8,
         scores: {
           "The Polo Bar": 2,
@@ -274,23 +274,23 @@ const gameData = {
     },
   },
   8: {
-    text: "You're home and you have a few hours to yourself, what are you doing?",
+    text: "you're home and you have a few hours to yourself, what are you doing?",
     choices: {
-      "Taking a nap": {
+      "taking a nap": {
         next: 9,
         scores: {
           "4 Charles Prime Rib": 2,
           "I Sodi": 2,
         },
       },
-      "Watching a movie/show": {
+      "watching a movie/show": {
         next: 9,
         scores: {
           "The Polo Bar": 1,
-          "Corner Store": 1,
+          "The Corner Store": 1,
         },
       },
-      "Watching sports": {
+      "watching sports": {
         next: 9,
         scores: {
           "The Corner Store": 2,
@@ -298,14 +298,14 @@ const gameData = {
           Carbone: 1,
         },
       },
-      "Finishing up some work": {
+      "finishing up some work": {
         next: 9,
         scores: {
           "I Sodi": 2,
           "The Polo Bar": 2,
         },
       },
-      "Grocery shopping/doing laundry (personal hell)": {
+      "grocery shopping/doing laundry (personal hell)": {
         next: 9,
         scores: {
           "The Corner Store": 2,
@@ -314,9 +314,9 @@ const gameData = {
     },
   },
   9: {
-    text: "Time to get ready! What are you most likely wearing?",
+    text: "time to get ready! what are you most likely wearing?",
     choices: {
-      "Dress to impress": {
+      "dress to impress": {
         next: 10,
         scores: {
           "The Polo Bar": 2,
@@ -329,20 +329,20 @@ const gameData = {
           Carbone: 2,
         },
       },
-      Jeans: {
+      jeans: {
         next: 10,
         scores: {
           Tatiana: 1,
           "I Sodi": 2,
         },
       },
-      "Something comfy": {
+      "something comfy": {
         next: 10,
         scores: {
           "The Corner Store": 2,
         },
       },
-      "White sneakers": {
+      "white sneakers": {
         next: 10,
         scores: {
           "The Corner Store": 1,
@@ -351,23 +351,23 @@ const gameData = {
     },
   },
   10: {
-    text: "What are you spending your Saturday night doing?",
+    text: "what are you spending your saturday night doing?",
     choices: {
-      "Bar hopping": {
+      "bar hopping": {
         next: 11,
         scores: {
           "The Corner Store": 2,
           Tatiana: 2,
         },
       },
-      "Celebrating a birthday (why is it always someone's birthday)": {
+      "celebrating a birthday (why is it always someone's birthday)": {
         next: 11,
         scores: {
           Carbone: 2,
           "The Polo Bar": 1,
         },
       },
-      "Going to a friend's or hosting": {
+      "going to a friend's or hosting": {
         next: 11,
         scores: {
           "4 Charles Prime Rib": 2,
@@ -375,14 +375,14 @@ const gameData = {
           "I Sodi": 2,
         },
       },
-      "Going on a date": {
+      "going on a date": {
         next: 11,
         scores: {
           "The Polo Bar": 2,
           "I Sodi": 2,
         },
       },
-      "Jazz or comedy club (aka trying to adult)": {
+      "jazz or comedy club (aka trying to adult)": {
         next: 11,
         scores: {
           "The Polo Bar": 2,
@@ -392,7 +392,7 @@ const gameData = {
     },
   },
   11: {
-    text: "It's time to call it a night, what're you grabbing on your way home?",
+    text: "it's time to call it a night, what're you grabbing on your way home?",
     choices: {
       "7th street burger": {
         next: 12,
@@ -400,26 +400,26 @@ const gameData = {
           Tatiana: 2,
         },
       },
-      "A new york slice": {
+      "a new york slice": {
         next: 12,
         scores: {
           Carbone: 2,
         },
       },
-      "Chopped cheese (or something from bodega)": {
+      "chopped cheese (or something from bodega)": {
         next: 12,
         scores: {
           "The Corner Store": 2,
         },
       },
-      Water: {
+      water: {
         next: 12,
         scores: {
           "I Sodi": 1,
           "The Polo Bar": 1,
         },
       },
-      Air: {
+      air: {
         next: 12,
         scores: {
           "4 Charles Prime Rib": 1,
@@ -429,36 +429,36 @@ const gameData = {
     },
   },
   12: {
-    text: "Sweet dreams! What are you dreaming about?",
+    text: "sweet dreams! what are you dreaming about?",
     choices: {
-      "Something stressful": {
+      "something stressful": {
         next: 0,
         scores: {
           "4 Charles Prime Rib": 1,
           "I Sodi": 1,
         },
       },
-      "The perfect day": {
+      "the perfect day": {
         next: 0,
         scores: {
           "The Polo Bar": 2,
         },
       },
-      "My situationship (nightmare)": {
+      "my situationship (nightmare)": {
         next: 0,
         scores: {
           Tatiana: 1,
           "The Corner Store": 1,
         },
       },
-      Work: {
+      work: {
         next: 0,
         scores: {
           "The Polo Bar": 1,
           Carbone: 1,
         },
       },
-      "I don't dream": {
+      "i don't dream": {
         next: 0,
         scores: {
           "The Corner Store": 1,
@@ -553,8 +553,8 @@ function revealResult() {
         class="responsive-image"
         style="max-width: 100%; height: auto; margin: 20px auto;"
       >
-      <button onclick="location.reload()" class="choice-button" style="margin-top: 20px;">
-        Play Again
+      <button onclick="location.reload()" class="choice-button" style="margin-top: 20px; margin-bottom: 20px;">
+        Share with friends!
       </button>
     </div>
   `;
