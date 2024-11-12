@@ -545,6 +545,8 @@ function revealResult() {
   const container = document.getElementById("game-container");
   const profile = restaurantProfiles[result];
 
+  document.getElementById("main-container").classList.remove("game-active");
+
   container.innerHTML = `
     <div class="result-container">
       <img 
@@ -565,6 +567,7 @@ function startGame() {
   document.getElementById("homescreen").style.display = "none";
   document.querySelector(".start-button").style.display = "none";
   document.getElementById("game-container").style.display = "block";
+  document.getElementById("main-container").classList.add("game-active");
   renderState(currentState);
 }
 
