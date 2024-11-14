@@ -557,7 +557,7 @@ function revealResult() {
         class="responsive-image"
         style="max-width: 100%; height: auto;"
       >
-      <button onclick="location.reload()" class="share-button" >
+      <button onclick="handleShare()" class="share-button">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="share-icon">
           <path d="M7 17l9.2-9.2M17 17V7H7"/>
         </svg>
@@ -565,6 +565,40 @@ function revealResult() {
       </button>
     </div>
   `;
+}
+
+function copyToClipboard() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const shareButton = document.querySelector(".share-button");
+    const originalText = shareButton.innerHTML;
+
+    shareButton.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 6L9 17l-5-5"/>
+      </svg>
+      <u>copied!</u>
+    `;
+
+    setTimeout(() => {
+      shareButton.innerHTML = originalText;
+    }, 2000);
+  });
+}
+
+function handleShare() {
+  if (navigator.share) {
+    // Mobile device
+    navigator
+      .share({
+        title: "What NYC Restaurant are you?",
+        text: "Take this quiz to find out which NYC restaurant matches your personality!",
+        url: window.location.href,
+      })
+      .catch(console.error);
+  } else {
+    // Desktop
+    copyToClipboard();
+  }
 }
 
 function startGame() {
