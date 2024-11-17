@@ -1,6 +1,6 @@
 const gameData = {
   1: {
-    text: "good morning! you wake up on a saturday thirsty, what're you reaching for?",
+    text: "good morning! you wake up on a saturday thirsty, what are you reaching for?",
     choices: {
       water: {
         next: 2,
@@ -313,6 +313,8 @@ const gameData = {
       },
     },
   },
+
+  // Question for JENN: Get ready for what? Specify
   9: {
     text: "time to get ready! what are you most likely wearing?",
     choices: {
@@ -392,7 +394,7 @@ const gameData = {
     },
   },
   11: {
-    text: "it's time to call it a night, what're you grabbing on your way home?",
+    text: "it's time to call it a night, what are you grabbing on your way home?",
     choices: {
       "7th street burger": {
         next: 12,
@@ -537,6 +539,7 @@ function renderState(state) {
   });
 }
 
+// Note for JENN: you were spotted at -> you were /* ALSO */ spotted at
 function revealResult() {
   const maxScore = Math.max(...Object.values(scores));
   const result = Object.entries(scores).find(
